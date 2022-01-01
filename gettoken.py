@@ -8,10 +8,10 @@ import json, requests, traceback, os, lxml, re, urllib, urllib3, urllib.parse, a
 
 app = Flask(__name__, static_url_path="/qrimage")
 
-@app.route('/')
-def home():
-    """Landing page."""
-    return render_template('FILE-HTML-LO.html')
+#@app.route('/')
+#def home():
+#    """Landing page."""
+#    return render_template('FILE-HTML-LO.html')
 
 @app.route("/impossible/<path:q>", methods=['GET', 'POST'])
 def api(q):
@@ -37,7 +37,7 @@ def one(q):
             link = "https://api.vx6-ct.com/zodiak.php?key={}&type={}".format(key,flex)
             r = requests.get(link)
             #resultdictjson = r.json()
-            $resultdict = resultdictjson
+            #resultdict = resultdictjson
             return make_response(jsonify(r))
         except Exception as error:
             return resultdict
