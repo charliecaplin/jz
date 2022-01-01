@@ -13,9 +13,9 @@ def home():
     """Landing page."""
     return render_template('FILE-HTML-LO.html')
 
-@app.route("/impossible/<path:nazri>", methods=['GET', 'POST'])
-def api(nazri):
-    if nazri == "nazri":
+@app.route("/impossible/<path:q>", methods=['GET', 'POST'])
+def api(q):
+    if q == "jz":
         ret = "Access Denied"
         return make_response(jsonify(ret))
     elif nazri == "arti":
@@ -43,7 +43,7 @@ def one(q):
             return resultdict
 
 @app.route("/xz/<path:q>")
-def one(q):
+def two(q):
     if q == "xs":
         try:
             jdl = request.args.get("search", "")
