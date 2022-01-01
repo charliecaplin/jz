@@ -18,7 +18,7 @@ def api(q):
     if q == "jz":
         ret = "Access Denied"
         return make_response(jsonify(ret))
-    elif nazri == "arti":
+    elif q == "arti":
         twit = request.args.get("nama", "")
         link = "http://primbon.com/arti_nama.php?nama1={}&proses=+Submit%21+".format(urllib.parse.quote(twit))
         r = requests.get(link)
