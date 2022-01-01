@@ -55,13 +55,5 @@ def one(q):
         except Exception as error:
             return resultdict
 
-@app.route('/getqrimage/<path:path>')
-def send_static_content(path):
-    try:
-        return send_from_directory('qrimage', path)
-    except Exception as error:
-        return error
-        #print ("error, contact the creator")
-
 if __name__ == "__main__":
     app.run()
