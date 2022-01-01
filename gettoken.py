@@ -34,7 +34,7 @@ def one(q):
         try:
             key = request.args.get("key", "")
             type = "flex"
-            link = "https://api.vx6-ct.com/zodiak.php?key={}&type={}".format(key,flex)
+            link = "https://api.vx6-ct.com/zodiak.php?key={}&type={}".format(key,type)
             r = requests.get(link)
             resultdictjson = r.json()
             resultdict = resultdictjson
