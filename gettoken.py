@@ -40,7 +40,7 @@ def one(q):
             #resultdict = resultdictjson
             return make_response(jsonify(r))
         except Exception as error:
-            return resultdictjson
+            return error
 
 @app.route("/xz/<path:q>")
 def two(q):
