@@ -33,7 +33,7 @@ def one(q):
     if q == "xz":
         try:
             key = request.args.get("key", "")
-            type = request.args.get("type", "")
+            type = "flex"
             link = "https://api.vx6-ct.com/zodiak.php?key={}&type={}".format(key,flex)
             r = requests.get(link)
             resultdictjson = r.json()
