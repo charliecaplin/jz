@@ -36,11 +36,11 @@ def one(q):
             type = request.args.get("type", "")
             link = "https://api.vx6-ct.com/zodiak.php?key={}&type={}".format(key,flex)
             r = requests.get(link)
-            #resultdictjson = r.json()
+            resultdictjson = r.json()
             #resultdict = resultdictjson
             return make_response(jsonify(r))
         except Exception as error:
-            return resultdict
+            return resultdictjson
 
 @app.route("/xz/<path:q>")
 def two(q):
